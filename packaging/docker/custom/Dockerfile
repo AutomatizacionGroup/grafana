@@ -4,7 +4,7 @@ FROM grafana/grafana:${GRAFANA_VERSION}
 
 USER grafana
 
-ARG GF_INSTALL_PLUGINS=""
+ARG GF_INSTALL_PLUGINS="natel-discrete-panel,yesoreyeram-boomtable-panel"
 
 RUN if [ ! -z "${GF_INSTALL_PLUGINS}" ]; then \
     OLDIFS=$IFS; \
